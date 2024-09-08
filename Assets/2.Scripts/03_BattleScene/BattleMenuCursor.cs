@@ -1,30 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BattleMenuCursor : MonoBehaviour
 {
     [SerializeField]
+    private GameObject[] menus;
+
     private Image[] cursors;
 
-    private int preSelMenu;
-    private int selMenu;
+    private TextMeshProUGUI gameMessage;
+
+    private int preSelAction;
+    private int selAction;
     private bool isCursorChanged = false;
+
+    private MenuType currentMenu;
+
+    enum MenuType
+    {
+        ROOT,
+        BATTLE,
+        BAG,
+        POKEMON,
+        RUN
+    }
 
     private void Awake()
     {
-        InitCursor();
+        // get game message object in root menu
+        gameMessage = menus[(int) MenuType.ROOT].transform.Find("TextOutputBg/GameMessage").gameObject.GetComponent<TextMeshProUGUI>();
+
+        currentMenu = MenuType.ROOT;
+
+        ChangeCursorImg();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         GetUserInput();
 
@@ -33,7 +48,14 @@ public class BattleMenuCursor : MonoBehaviour
 
     private void InitCursor()
     {
-        selMenu = 0;
+        selAction = 0;
+
+        cursors[0].gameObject.SetActive(true);
+
+        for(int i = 1; i < cursors.Length; i++)
+        {
+            cursors[i].gameObject.SetActive(false);
+        }
     }
 
     private void GetUserInput()
@@ -48,27 +70,38 @@ public class BattleMenuCursor : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Z))
         {
-            GetUserSelectMenu();
+            if(currentMenu == MenuType.ROOT)
+            {
+                GetUserSelectAction();
+            }
+            else if(currentMenu == MenuType.BATTLE)
+            {
+                GetUserSelectSkill();
+            }
+        }
+        else if(Input.GetKeyDown(KeyCode.X))
+        {
+            ExitMenu(currentMenu);
         }
     }
 
     private void InputHorizontal()
     {
-        preSelMenu = selMenu;
+        preSelAction = selAction;
 
-        switch(selMenu)
+        switch(selAction)
         {
             case 0:             // current cursor position is 'battle'
-                selMenu = 1;    // change cursor position to 'bag'
+                selAction = 1;    // change cursor position to 'bag'
                 break;
             case 1:             // current cursor position is 'bag'
-                selMenu = 0;    // change cursor position to 'battle'
+                selAction = 0;    // change cursor position to 'battle'
                 break;
             case 2:             // current cursor position is 'pokemon'
-                selMenu = 3;    // change cursor position to 'run'
+                selAction = 3;    // change cursor position to 'run'
                 break;
             case 3:             // current cursor position is 'run'
-                selMenu = 2;    // change cursor position to 'pokemon'
+                selAction = 2;    // change cursor position to 'pokemon'
                 break;
         }
 
@@ -77,21 +110,21 @@ public class BattleMenuCursor : MonoBehaviour
 
     private void InputVertical()
     {
-        preSelMenu = selMenu;
+        preSelAction = selAction;
 
-        switch(selMenu)
+        switch(selAction)
         {
             case 0:             // current cursor position is 'battle'
-                selMenu = 2;    // change cursor position to 'pokemon'
+                selAction = 2;    // change cursor position to 'pokemon'
                 break;
             case 1:             // current cursor position is 'bag'
-                selMenu = 3;    // change cursor position to 'run'
+                selAction = 3;    // change cursor position to 'run'
                 break;
             case 2:             // current cursor position is 'pokemon'
-                selMenu = 0;    // change cursor position to 'battle'
+                selAction = 0;    // change cursor position to 'battle'
                 break;
             case 3:             // current cursor position is 'run'
-                selMenu = 1;    // change cursor position to 'bag'
+                selAction = 1;    // change cursor position to 'bag'
                 break;
         }
 
@@ -103,31 +136,101 @@ public class BattleMenuCursor : MonoBehaviour
         if(isCursorChanged == false)
             return;
 
-        cursors[preSelMenu].gameObject.SetActive(false);
+        cursors[preSelAction].gameObject.SetActive(false);
 
-        cursors[selMenu].gameObject.SetActive(true);
+        cursors[selAction].gameObject.SetActive(true);
 
         isCursorChanged = false;
     }
 
-    private void GetUserSelectMenu()
+    private void GetUserSelectAction()
     {
-        switch(selMenu)
+        switch(selAction)
         {
             case 0:
-                Debug.Log("Battle");
+                EnterMenu(MenuType.BATTLE);
+
                 break;
             case 1:
-                Debug.Log("Bag");
+                gameMessage.text = "지금은 사용할 수 없어";
+
                 break;
             case 2:
                 Debug.Log("Pokemon");
+
                 break;
             case 3:
-                Debug.Log("Run");
+                gameMessage.text = "지금은 도망칠 수 없어";
+
                 break;
             default:
                 break;
         }
+    }
+
+    private void GetUserSelectSkill()
+    {
+        switch(selAction)
+        {
+            case 0:
+                Debug.Log("몸통박치기");
+                break;
+            case 1:
+                Debug.Log("전광석화");
+                break;
+            case 2:
+                Debug.Log("울부짖기");
+                break;
+            case 3:
+                Debug.Log("째려보기");
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ExitMenu(MenuType menu)
+    {
+        if(currentMenu == 0)
+        {
+            return;
+        }
+
+        menus[(int) MenuType.ROOT].SetActive(true);
+        menus[(int) menu].SetActive(false);
+
+        currentMenu = MenuType.ROOT;
+
+        ChangeCursorImg();
+
+        gameMessage.text = "포켓몬 이름은 무엇을 할까?";
+    }
+
+    private void EnterMenu(MenuType menu)
+    {
+        menus[(int) MenuType.ROOT].SetActive(false);
+        menus[(int) menu].SetActive(true);
+
+        currentMenu = menu;
+
+        ChangeCursorImg();
+    }
+
+    private void ChangeCursorImg()
+    {
+        // get cursors parent object
+        Transform obj = menus[(int) currentMenu].transform.Find("MenuBg/MenuCursor");
+
+        if(obj == null)
+            return;
+
+        cursors = new Image[obj.childCount];
+
+        for(int i = 0; i < obj.childCount; i++)
+        {
+            cursors[i] = obj.GetChild(i).GetComponent<Image>();
+        }
+
+        InitCursor();
     }
 }

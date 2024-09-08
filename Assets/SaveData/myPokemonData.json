@@ -1,0 +1,31 @@
+{
+    "name": "봄바스틱",
+    "level": 1,
+    "hp": 50,
+    "maxHp": 50,
+    "exp": 0,
+    "maxExp": 100,
+    "speed": 10,
+    "skills": [
+        {
+            "name": "몸통박치기",
+            "power": 80,
+            "skillType": "attack"
+        },
+        {
+            "name": "전광석화",
+            "power": 80,
+            "skillType": "attack"
+        },
+        {
+            "name": "울부짖기",
+            "buff": 80,
+            "skillType": "buff"
+        },
+        {
+            "name": "째려보기",
+            "debuff": 80,
+            "skillType": "debuff"
+        }
+    ]
+}

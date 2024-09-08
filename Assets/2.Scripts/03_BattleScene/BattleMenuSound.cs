@@ -32,7 +32,7 @@ public class BattleMenuSound : MonoBehaviour
         {
             PlayCursorSound();
         }
-        else if(Input.GetKeyDown(KeyCode.Z))
+        else if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X))
         {
             PlaySelectSound();
         }
