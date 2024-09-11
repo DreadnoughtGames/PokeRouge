@@ -10,4 +10,6 @@ public class PokemonSkill
     public int buff;
     public int debuff;
     public string skillType;
+    public int skillPoint;
+    public int maxSkillPoint;
 }

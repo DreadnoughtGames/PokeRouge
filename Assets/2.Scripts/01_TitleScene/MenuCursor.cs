@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuCursor : MonoBehaviour
@@ -116,7 +117,7 @@ public class MenuCursor : MonoBehaviour
         switch(selMenu)
         {
             case 0:
-                Debug.Log("New Game");
+                SceneManager.LoadScene("03_BattleScene");
                 break;
             case 1:
                 Debug.Log("Continue");

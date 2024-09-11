@@ -11,15 +11,15 @@ public class Pokemon
     public int level;
     public int hp;
     public int maxHp;
+    public int attack;
+    public int defense;
+    public int speed;
     public int exp;
     public int maxExp;
-    public int speed;
     public PokemonSkill[] skills = new PokemonSkill[4];
 
     public Pokemon()
     {
-
-
 
     }
 }

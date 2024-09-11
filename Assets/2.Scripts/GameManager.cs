@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
-    public Pokemon myPokemon;
+    private AudioSource sound;
+
+    public Player player;
 
     private void Awake()
     {
@@ -20,27 +22,52 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        sound = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        GetMyPokemonData();
+        GetPlayerData();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GetUserInput();
     }
 
-    public void GetMyPokemonData()
+    public void GetPlayerData()
     {
-        myPokemon = new Pokemon();
+        if(player == null)
+        {
+            player = new Player();
+        }
 
-        string path = Path.Combine(Application.dataPath, "SaveData/myPokemonData.json");
+        string path = Path.Combine(Application.dataPath, "SaveData/playerData.json");
         string json = File.ReadAllText(path);
 
-        myPokemon = JsonUtility.FromJson<Pokemon>(json);
+        player = JsonUtility.FromJson<Player>(json);
+
+        Debug.Log(player);
+    }
+    public void GetEnemyPokemonData()
+    {
+
+    }
+
+    // Cursor Sound Method
+    private void GetUserInput()
+    {
+        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X))
+        {
+            PlayCursorSound();
+        }
+    }
+
+    private void PlayCursorSound()
+    {
+        sound.Play();
     }
 }

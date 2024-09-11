@@ -9,10 +9,11 @@ public class BattleMenuCursor : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] menus;
+    private TextMeshProUGUI gameMessage;
+    private MyPokemonSkill myPokemonSkill;
 
     private Image[] cursors;
 
-    private TextMeshProUGUI gameMessage;
 
     private int preSelAction;
     private int selAction;
@@ -33,6 +34,7 @@ public class BattleMenuCursor : MonoBehaviour
     {
         // get game message object in root menu
         gameMessage = menus[(int) MenuType.ROOT].transform.Find("TextOutputBg/GameMessage").gameObject.GetComponent<TextMeshProUGUI>();
+        myPokemonSkill = transform.Find("BattleMenu").GetComponent<MyPokemonSkill>();
 
         currentMenu = MenuType.ROOT;
 
@@ -139,6 +141,11 @@ public class BattleMenuCursor : MonoBehaviour
         cursors[preSelAction].gameObject.SetActive(false);
 
         cursors[selAction].gameObject.SetActive(true);
+
+        if(currentMenu == MenuType.BATTLE)
+        {
+            myPokemonSkill.ChangeSkill(selAction);
+        }
 
         isCursorChanged = false;
     }

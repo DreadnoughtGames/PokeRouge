@@ -1,0 +1,130 @@
+{
+    "stage": 1,
+    "money": 0,
+    "currentPokemon": 0,
+    "pokemons": [
+        {
+            "name": "테무 메타몽",
+            "level": 1,
+            "hp": 85,
+            "maxHp": 85,
+            "attck": 85,
+            "defence": 85,
+            "speed": 85,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "테무 따라큐",
+            "level": 1,
+            "hp": 62,
+            "maxHp": 62,
+            "attck": 77,
+            "defence": 99,
+            "speed": 102,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "테무 거북왕",
+            "level": 1,
+            "hp": 79,
+            "maxHp": 79,
+            "attck": 83,
+            "defence": 100,
+            "speed": 78,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        }
+    ]
+}
