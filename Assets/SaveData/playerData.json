@@ -6,7 +6,7 @@
         {
             "name": "테무 메타몽",
             "level": 1,
-            "hp": 85,
+            "hp": 25,
             "maxHp": 85,
             "attck": 85,
             "defence": 85,
@@ -25,22 +25,22 @@
                     "name": "전광석화",
                     "power": 80,
                     "skillType": "attack",
-                    "skillPoint": 15,
-                    "maxSkillPoint": 15
+                    "skillPoint": 10,
+                    "maxSkillPoint": 10
                 },
                 {
                     "name": "울부짖기",
                     "buff": 80,
                     "skillType": "buff",
-                    "skillPoint": 15,
-                    "maxSkillPoint": 15
+                    "skillPoint": 20,
+                    "maxSkillPoint": 20
                 },
                 {
                     "name": "째려보기",
                     "debuff": 80,
                     "skillType": "debuff",
-                    "skillPoint": 15,
-                    "maxSkillPoint": 15
+                    "skillPoint": 25,
+                    "maxSkillPoint": 25
                 }
             ]
         },

@@ -17,9 +17,4 @@ public class Pokemon
     public int exp;
     public int maxExp;
     public PokemonSkill[] skills = new PokemonSkill[4];
-
-    public Pokemon()
-    {
-
-    }
 }

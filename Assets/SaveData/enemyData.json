@@ -1,0 +1,414 @@
+{
+    "pokemons": [
+        {
+            "name": "단데기",
+            "level": 1,
+            "hp": 30,
+            "maxHp": 50,
+            "attck": 20,
+            "defence": 55,
+            "speed": 30,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 10,
+                    "maxSkillPoint": 10
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 20,
+                    "maxSkillPoint": 20
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 25,
+                    "maxSkillPoint": 25
+                }
+            ]
+        },
+        {
+            "name": "꼬렛",
+            "level": 1,
+            "hp": 30,
+            "maxHp": 30,
+            "attck": 40,
+            "defence": 35,
+            "speed": 72,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "화살꼬빈",
+            "level": 1,
+            "hp": 45,
+            "maxHp": 45,
+            "attck": 50,
+            "defence": 43,
+            "speed": 62,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "잉어킹",
+            "level": 1,
+            "hp": 20,
+            "maxHp": 20,
+            "attck": 10,
+            "defence": 55,
+            "speed": 80,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "모크나이퍼",
+            "level": 1,
+            "hp": 78,
+            "maxHp": 78,
+            "attck": 103,
+            "defence": 87,
+            "speed": 70,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "두두",
+            "level": 1,
+            "hp": 35,
+            "maxHp": 35,
+            "attck": 60,
+            "defence": 40,
+            "speed": 75,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "이브이",
+            "level": 1,
+            "hp": 55,
+            "maxHp": 55,
+            "attck": 50,
+            "defence": 58,
+            "speed": 55,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "브케인",
+            "level": 1,
+            "hp": 39,
+            "maxHp": 39,
+            "attck": 56,
+            "defence": 47,
+            "speed": 65,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "또가스",
+            "level": 1,
+            "hp": 40,
+            "maxHp": 40,
+            "attck": 63,
+            "defence": 90,
+            "speed": 35,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        },
+        {
+            "name": "메가 레쿠쟈",
+            "level": 1,
+            "hp": 105,
+            "maxHp": 105,
+            "attck": 150,
+            "defence": 90,
+            "speed": 95,
+            "exp": 0,
+            "maxExp": 100,
+            "skills": [
+                {
+                    "name": "몸통박치기",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "전광석화",
+                    "power": 80,
+                    "skillType": "attack",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "울부짖기",
+                    "buff": 80,
+                    "skillType": "buff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                },
+                {
+                    "name": "째려보기",
+                    "debuff": 80,
+                    "skillType": "debuff",
+                    "skillPoint": 15,
+                    "maxSkillPoint": 15
+                }
+            ]
+        }
+    ]
+}

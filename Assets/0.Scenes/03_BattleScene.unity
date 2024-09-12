@@ -551,6 +551,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd94183ba5941f438aad463a0f198db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpSprites:
+  - {fileID: 7649121251308744489, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
+  - {fileID: 629388769956113088, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
+  - {fileID: 5145587420429814148, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
 --- !u!1 &190135926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,6 +3692,7 @@ GameObject:
   - component: {fileID: 1673884854}
   - component: {fileID: 1673884856}
   - component: {fileID: 1673884855}
+  - component: {fileID: 1673884857}
   m_Layer: 5
   m_Name: EnemyPanel
   m_TagString: EnemyPanel
@@ -3754,6 +3759,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673884853}
   m_CullTransparentMesh: 1
+--- !u!114 &1673884857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673884853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527c5af2e6b7b054fb52467ec400f50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpSprites:
+  - {fileID: 7649121251308744489, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
+  - {fileID: 629388769956113088, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
+  - {fileID: 5145587420429814148, guid: 255953d4fc6404442b0130c07033cd2c, type: 3}
 --- !u!1 &1689237007
 GameObject:
   m_ObjectHideFlags: 0

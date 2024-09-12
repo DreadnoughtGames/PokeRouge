@@ -43,7 +43,6 @@ public class MyPokemonSkill : MonoBehaviour
     {
         
     }
-
     private void InitPokemonSkill()
     {
         //for(int i = 0; i < 4; i++)
@@ -51,21 +50,30 @@ public class MyPokemonSkill : MonoBehaviour
         //    names[i].text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[i].name;
         //}
 
-        firstSkillName.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[0].name;
-        secondSkillName.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[1].name;
-        thirdSkillName.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[2].name;
-        fourthSkillName.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[3].name;
+        if(gameManager.currentPlayerPokemon == null)
+        {
+            gameManager.GetCurrentPokemonData();
+        }
 
-        power.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[0].power.ToString();
-        pp.text = $"{gameManager.player.pokemons[gameManager.player.currentPokemon].skills[0].skillPoint.ToString()}/{gameManager.player.pokemons[gameManager.player.currentPokemon].skills[0].maxSkillPoint.ToString()}";
+        firstSkillName.text = gameManager.currentPlayerPokemon.skills[0].name ?? "---";
+        secondSkillName.text = gameManager.currentPlayerPokemon.skills[1].name ?? "---";
+        thirdSkillName.text = gameManager.currentPlayerPokemon.skills[2].name ?? "---";
+        fourthSkillName.text = gameManager.currentPlayerPokemon.skills[3].name ?? "---";
+
+        power.text = gameManager.currentPlayerPokemon.skills[0].power.ToString();
+        pp.text = $"{gameManager.currentPlayerPokemon.skills[0].skillPoint.ToString()}/{gameManager.currentPlayerPokemon.skills[0].maxSkillPoint.ToString()}";
     }
 
     public void ChangeSkill(int selSkill)
     {
         if(currentSkill != selSkill)
         {
-            power.text = gameManager.player.pokemons[gameManager.player.currentPokemon].skills[selSkill].power.ToString();
-            pp.text = $"{gameManager.player.pokemons[gameManager.player.currentPokemon].skills[selSkill].skillPoint.ToString()}/{gameManager.player.pokemons[gameManager.player.currentPokemon].skills[selSkill].maxSkillPoint.ToString()}";
+            if(gameManager.currentPlayerPokemon.skills[selSkill].power == 0)
+                power.text = "---";
+            else
+                power.text = gameManager.currentPlayerPokemon.skills[selSkill].power.ToString() ?? "---";
+
+            pp.text = $"{gameManager.currentPlayerPokemon.skills[selSkill].skillPoint.ToString()}/{gameManager.currentPlayerPokemon.skills[selSkill].maxSkillPoint.ToString()}" ?? "---";
 
             currentSkill = selSkill;
         }

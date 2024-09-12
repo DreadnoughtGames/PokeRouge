@@ -331,35 +331,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca4a621724f0b44a80c3f936ad635bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPokemon:
-    name: 
-    level: 0
-    hp: 0
-    maxHp: 0
-    exp: 0
-    maxExp: 0
-    speed: 0
-    skills:
-    - name: 
-      power: 0
-      buff: 0
-      debuff: 0
-      skillType: 
-    - name: 
-      power: 0
-      buff: 0
-      debuff: 0
-      skillType: 
-    - name: 
-      power: 0
-      buff: 0
-      debuff: 0
-      skillType: 
-    - name: 
-      power: 0
-      buff: 0
-      debuff: 0
-      skillType: 
+  sound: {fileID: 8300000, guid: ac2cd5aca8b1e4c41a5ed29f2a02c3b3, type: 3}
+  player:
+    stage: 0
+    money: 0
+    currentPokemon: 0
+    pokemons: []
+  enemy:
+    pokemons: []
 --- !u!4 &267859980
 Transform:
   m_ObjectHideFlags: 0
@@ -384,7 +363,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac2cd5aca8b1e4c41a5ed29f2a02c3b3, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
