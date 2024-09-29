@@ -7,15 +7,31 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
 
+    // Audio
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip sound;
 
+    // Player and Enemy Status
     public Player player;
     public Enemy enemy;
 
     public Pokemon currentPlayerPokemon;
     public Pokemon currentEnemyPokemon;
+
+    // Current Menu
+    private GameObject[] menus;
+
+    private MenuType currentMenu { get; set; }
+
+    public enum MenuType
+    {
+        ROOT,
+        BATTLE,
+        BAG,
+        POKEMON,
+        RUN
+    }
 
     private void Awake()
     {
